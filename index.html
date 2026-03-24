@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMLPY1</title>
+</head>
+
+
+
+<body>
+
+    <!-- <h1 style="color: rgb(14, 107, 189);">Home Work</h1>
+ <button onclick="typewriter()">Click Me</button>
+ <p id="demo"></p>
+ <script >
+ var i = 0;
+ var  txt  = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum    mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hend';
+ var speed = 50;
+ function typewriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typewriter, speed);
+   }
+ }
+ </script> ບົດ1 -->
+
+
+    <!-- <style>
+        table,
+        th,
+        td {
+            border: 1px solid rgb(149, 54, 54);
+
+        }
+    </style>
+
+    <h1>
+        table with border
+    </h1>
+    <p>HTML TABLE</p>
+    <table style="width: 100%;">
+
+
+        <tr style="background-color: #dc5252;">
+            <th>ຊື່</th>
+            <th>ນາມສະກຸນ</th>
+            <th>ອາຍຸ</th>
+
+        <tr style="background-color: #f2f2f2;">
+
+            <td>ກໍລະກັນ</td>
+            <td>ຮຽວທະວີສຸກ</td>
+            <td>20</td>
+        </tr>
+        <tr style="background-color: #f2f2f2;">
+
+            <td>ສຸສັກ</td>
+            <td>ຮຽວທະວີສຸກ</td>
+            <td>21</td>
+        </tr>
+        <tr style="background-color: #f2f2f2;">
+
+            <td>ຈັນທະວົງ</td>
+            <td>ຮຽວທະວີສຸກ</td>
+            <td>22</td>
+        </tr>
+        <tr style="background-color: #f2f2f2;">
+
+            <td>ອະນົງສັກ</td>
+            <td>ຮຽວທະວີສຸກ</td>
+            <td>23</td>
+        </tr>
+        <tr style="background-color: #f2f2f2;">
+
+            <td>ອາລັນ</td>
+            <td>ຮຽວທະວີສຸກ</td>
+            <td>24</td>
+        </tr>
+        
+    </table> ບົດ2 -->
+
+    <!-- <style>
+        table {
+            font-family: lao_cafe, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+
+        }
+
+        td,
+        th {
+            border: 1px solid #2b555c;
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <h3 style="color: bisque;">
+        table with border
+    </h3>
+    <table style="width: 100%;">
+
+
+        <tr style="background-color: #407d89;">
+            <th>ຊື່</th>
+            <th>ນາມສະກຸນ</th>
+            <th>ອາຍຸ</th>
+
+        <tr style="background-color: #f2f2f2;">
+
+            <td>ກໍລະກັນ</td>
+            <td>ຮຽວທະວີສຸກ</td>
+            <td>20</td>
+        </tr>
+        <tr style="background-color: #f2f2f2;">
+
+            <td>ສຸສັກ</td>
+            <td>ຮຽວທະວີສຸກ</td>
+            <td>21</td>
+        </tr>
+        <tr style="background-color: #f2f2f2;">
+
+            <td>ຈັນທະວົງ</td>
+            <td>ຮຽວທະວີສຸກ</td>
+            <td>22</td>
+        </tr>
+        <tr style="background-color: #f2f2f2;">
+
+            <td>ອະນົງສັກ</td>
+            <td>ຮຽວທະວີສຸກ</td>
+            <td>23</td>
+        </tr>
+        <tr style="background-color: #f2f2f2;">
+
+            <td>ອາລັນ</td>
+            <td>ຮຽວທະວີສຸກ</td>
+            <td>24</td>
+        </tr>
+
+    </table> ບົດ3 -->
+
+
+    <!-- <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* create four equal columns that floats next to each other */
+        .columns {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width: 800px) {
+            .columns {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .columns {
+                width: 100%;
+            }
+
+        }
+    </style>
+    <h2>
+        four columns
+    </h2>
+    <div class="row">
+        <div class="columns" style="background-color: aqua;">
+            <h2>columns</h2>
+            <p>some tett...</p>
+
+        </div>
+        <div class="columns" style="background-color: rgb(27, 110, 53);">
+            <h2>columns2</h2>
+            <p>some tett...</p>
+
+        </div>
+        <div class="columns" style="background-color: rgb(25, 15, 81);">
+            <h2>columns3</h2>
+            <p>some tett...</p>
+
+        </div>
+        <div class="columns" style="background-color: rgb(113, 49, 15);">
+            <h2>columns3</h2>
+            <p>some tett...</p>
+
+        </div>
+    </div> -->
+
+    <!-- <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: lao_cafe, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f2f2f2;
+            padding: 50px 20px;
+        }
+
+        .main-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: rgb(69, 132, 159);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .rom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 250px;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease-in-out;
+            border-bottom: 4px solid transparent;
+        }
+
+        .column:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .column h2 {
+            margin-bottom: 15px;
+            color: #790909;
+            font-weight: 700;
+
+        }
+
+        .column p {
+            color: #1b1a1a;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .c1 {
+            border-color: rgb(77, 169, 169);
+        }
+
+        .c2 {
+            border-color: rgb(0, 123, 255);
+        }
+
+        .c3 {
+            border-color: rgb(114, 39, 129);
+        }
+
+        .c4 {
+            border-color: rgb(45, 131, 158);
+        }
+
+        @media (max-width: 768px) {
+            .rom {
+                flex-direction: column;
+            }
+
+        }
+    </style>
+
+
+
+
+    <h2 class="main-title">ການຈັດວ່າງເເບບທັກສະໄໝ</h2>
+    <div class="rom">
+        <div class="column c1">
+            <h2>ຄໍລຳທີ່1</h2>
+            <p>ແນວທາງໃນການຈັດວ່າງເເບບທັກສະໄໝ ແນວນີ້ ແມ່ນ ການນໍາໃຊ້ Flexbox ແນວນີ້ ແມ່ນ ການນໍາໃຊ້ Grid</p>
+        </div>
+        <div class="column c2">
+            <h2>Flexbox</h2>
+            <p>Flexbox ແນວນີ້ ແມ່ນ ການນໍາໃຊ້ Flexbox ແນວນີ້ ແມ່ນ ການນໍາໃຊ້ Flexbox</p>
+        </div>
+        <div class="column c3">
+            <h2>Grid</h2>
+            <p>Grid ແນວນີ້ ແມ່ນ ການນໍາໃຊ້ Grid ແນວນີ້ ແມ່ນ ການນໍາໃຊ້ Grid</p>
+        </div>
+        <div class="column c4">
+            <h2>Media Queries</h2>
+            <p>Media Queries ແນວນີ້ ແມ່ນ ການນໍາໃຊ້ Media Queries ແນວນີ້ ແມ່ນ ການນໍາໃຊ້ Media Queries</p>
+        </div>
+    </div> -->
+
+    <!-- <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(32, 95, 146);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: rgb(14, 243, 255);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            padding: 100px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            background-image: url('../img/kor.jpg');
+            background-size: cover;
+            /* ເພື່ອໃຫ້ຮູບພໍດີກັບວົງມົນ */
+            background-position: center;
+            /* ເພື່ອໃຫ້ຮູບຢູ່ເຄິ່ງກາງ */
+
+        }
+
+
+        h2 {
+            color: #007bff;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #display-text {
+            margin-top: 15px;
+            color: #333;
+            font-size: 14px;
+            min-height: 24px;
+        }
+    </style>
+
+
+
+    <div class="card">
+        <div class="profile-img"></div>
+        <h2>ກໍລະກັນ ຮຽວທະວີສຸກ</h2>
+        <p>ນັກສຶກສາ ສາຂາ ໂປຣເເກັມເມີ້</p>
+        <button onclick="displayText()">Click Me</button>
+        <div id="display-text"></div>
+    </div>
+    <script>
+
+        function displayText() {
+            const el = document.getElementById("display-text");
+            el.innerText = "ສະບາຍດີ! ຂ້ອຍແມ່ນ ກໍລະກັນ ຮຽວທະວີສຸກ.";
+        }
+    </script> -->
+
+    <!-- <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background:white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        #clickbtn {
+           font-family: 'Courier New', Courier, monospace;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #clickbtn:active {transform: scale(0.9);}
+        #count {
+            display: block;
+            margin: 20px auto;
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+        p {
+            color: #333;
+            margin: 0;
+
+        }
+    </style>
+    <div class="card">
+        <h2>ນັບຄັ້ງທີກົດປຸ່ມ</h2>
+        <span id="count">0</span>
+        <button id="clickbtn">ກົດບອ່ນນີ້!</button>
+        <p style="margin-top: 15px;">ຈຳນວນການກົດປຸ່ມ</p>
+    </div>
+    <script>
+        let count = 0;
+        const but = document.getElementById('clickbtn');
+        const countDisplay = document.getElementById('count');
+        
+        but.addEventListener('click', () => {
+            count++;
+            countDisplay.textContent = count;
+            countDisplay.style.transform = 'scale(1.2)';
+            setTimeout(() => countDisplay.style.transform = 'scale(1)', 100);
+
+        });
+    </script> -->
+    <!-- 
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        button {
+            font-family: 'Courier New', Courier, monospace;
+            background: #11998e;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #38ef7d;
+            transform: scale(1.05);
+        }
+
+        #res {
+            margin-top: 20px;
+            color: #333;
+            font-size: 22px;
+            font-weight: bold;
+            min-height: 30px;
+
+        }
+    </style>
+
+    <div class="card">
+        <h2>ເເລກປ່ຽນເງີນບາດ ເປັນ ເງີນກີບ</h2>
+        <input type="text" id="amt" placeholder=" ປອ້ນຈຳນວນເງີນບາດ (THB)">
+        <p style="margin: 5px; color: #000;">ອັດຕາເເລກປ່ຽນ: 1 THB = 850 KIP</p>
+        <button onclick="convert()">ໄລ່ເງີນກີບ</button>
+        <div id="res">0 KIP</div>
+    </div>
+
+    
+    <script>
+        function convert() {
+            const amt = document.getElementById('amt').value;
+            const res = document.getElementById('res');
+            if (isNaN(amt) || amt.trim() === '') {
+                res.textContent = 'ກະລຸນາປ້ອນຈຳນວນເງີນບາດທີຕອ້ງການເເລກປ່ຽນ!';
+                res.style.color = 'red';
+                return;
+            }
+            const kip = parseFloat(amt) * 850;
+            res.textContent = `${kip.toLocaleString()} KIP`;
+            res.style.color = '#333';
+        }
+    </script> -->
+    <style>
+        body {
+            font-family: 'Noto Sans Lao', sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .pos-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 360px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        button {
+            font-family: 'Noto Sans Lao';
+            cursor: pointer;
+            background: #6d4c41;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 12px;
+        }
+
+        .receipt {
+            margin-top: 15px;
+            padding: 15px;
+            background: #fffde7;
+            border: 1px dashed #795548;
+            font-size: 14px;
+        }
+
+        .time-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .total {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1b5e20;
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
+    <div class="pos-card">
+        <h2 style="text-align:center; color: #5d4037;">ລາຍການອາຫານ</h2>
+        <div id="menu"></div>
+        <div class="receipt">
+            <div class="time-label" id="saleTime">ວັນທີ-ເວລາ: --/--/---- --:--:--</div>
+            <strong>ລາຍການທີ່ສັ່ງ:</strong>
+            <div id="orderList" style="margin: 8px 0;">ຍັງບໍ່ມີຄຳສັ່ງ...</div>
+            <div class="total">ລວມ: <span id="grandTotal">0</span> ກີບ</div>
+        </div>
+        <button onclick="resetAll()" style="width:100%; margin-top:10px; background: #c62828;">ລ້າງຂໍ້ມູນ</button>
+    </div>
+    <script>
+        const menu = [
+            { n: 'ກາເຟເຢັນ', p: 20000 },
+            { n: 'ລາເຕ້', p: 25000 },
+            { n: 'ຊາຂຽວ', p: 22000 }
+        ];
+        let cart = {};
+        function render() {
+            document.getElementById('menu').innerHTML = menu.map(i => `
+            <div class="item">
+                <span>${i.n}</span>
+                <button onclick="add('${i.n}', ${i.p})">ສັ່ງຊື້</button>
+            </div>
+        `).join('');
+        }
+        function add(name, price) {
+            cart[name] = (cart[name] || 0) + 1;
+            const now = new Date();
+            document.getElementById('saleTime').innerText = `ວັນທີ-ເວລາ: ${now.toLocaleString('lo-LA')}`;
+            updateUI();
+        }
+        function updateUI() {
+            let html = '';
+            let total = 0;
+            for (let n in cart) {
+                let p = menu.find(i => i.n === n).p;
+                html += `<div>${n} x ${cart[n]} = ${(cart[n] * p).toLocaleString()}</div>`;
+                total += cart[n] * p;
+            }
+            document.getElementById('orderList').innerHTML = html || 'ຍັງບໍ່ມີຄຳສັ່ງ...';
+            document.getElementById('grandTotal').innerText = total.toLocaleString();
+        }
+        function resetAll() {
+            if (confirm("ລ້າງຂໍ້ມູນຄຳສັ່ງຊື້ທັງໝົດ?")) {
+                cart = {};
+                updateUI();
+                document.getElementById('saleTime').innerText = 'ວັນທີ-ເວລາ: --/--/---- --:--:--';
+            }
+        }
+        render();
+    </script>
+</body>
+
+</html>

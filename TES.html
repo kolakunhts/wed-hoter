@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TES</title>
+</head>
+
+<body>
+
+
+    <style>
+        body {
+            font-family: 'Noto Sans Lao', sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .pos-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 360px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        button {
+            font-family: 'Noto Sans Lao';
+            cursor: pointer;
+            background: #6d4c41;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 12px;
+        }
+
+        .receipt {
+            margin-top: 15px;
+            padding: 15px;
+            background: #fffde7;
+            border: 1px dashed #795548;
+            font-size: 14px;
+        }
+
+        .time-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .total {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1b5e20;
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
+    <div class="pos-card">
+        <h2 style="text-align:center; color: #5d4037;">ລາຍການອາຫານ</h2>
+        <div id="menu"></div>
+        <div class="receipt">
+            <div class="time-label" id="saleTime">ວັນທີ-ເວລາ: --/--/---- --:--:--</div>
+            <strong>ລາຍການທີ່ສັ່ງ:</strong>
+            <div id="orderList" style="margin: 8px 0;">ຍັງບໍ່ມີຄຳສັ່ງ...</div>
+            <div class="total">ລວມ: <span id="grandTotal">0</span> ກີບ</div>
+        </div>
+        <button onclick="resetAll()" style="width:100%; margin-top:10px; background: #c62828;">ລ້າງຂໍ້ມູນ</button>
+    </div>
+    <script>
+        const menu = [
+            { n: 'ກາເຟເຢັນ', p: 20000 },
+            { n: 'ລາເຕ້', p: 25000 },
+            { n: 'ຊາຂຽວ', p: 22000 }
+        ];
+        let cart = {};
+        function render() {
+            document.getElementById('menu').innerHTML = menu.map(i => `
+            <div class="item">
+                <span>${i.n}</span>
+                <button onclick="add('${i.n}', ${i.p})">ສັ່ງຊື້</button>
+            </div>
+        `).join('');
+        }
+        function add(name, price) {
+            cart[name] = (cart[name] || 0) + 1;
+            const now = new Date();
+            document.getElementById('saleTime').innerText = `ວັນທີ-ເວລາ: ${now.toLocaleString('lo-LA')}`;
+            updateUI();
+        }
+        function updateUI() {
+            let html = '';
+            let total = 0;
+            for (let n in cart) {
+                let p = menu.find(i => i.n === n).p;
+                html += `<div>${n} x ${cart[n]} = ${(cart[n] * p).toLocaleString()}</div>`;
+                total += cart[n] * p;
+            }
+            document.getElementById('orderList').innerHTML = html || 'ຍັງບໍ່ມີຄຳສັ່ງ...';
+            document.getElementById('grandTotal').innerText = total.toLocaleString();
+        }
+        function resetAll() {
+            if (confirm("ລ້າງຂໍ້ມູນຄຳສັ່ງຊື້ທັງໝົດ?")) {
+                cart = {};
+                updateUI();
+                document.getElementById('saleTime').innerText = 'ວັນທີ-ເວລາ: --/--/---- --:--:--';
+            }
+        }
+        render();
+    </script>
+
+
+</body>
+
+</html>

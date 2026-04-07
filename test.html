@@ -1,23 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lo">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KTS Shop</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Noto Sans Lao", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            color: #444;
+            background-color: #f4f4f4;
+        }
+
+
+        .header {
+            background: linear-gradient(135deg, #0575E6, #021B79);
+            color: rgb(28, 27, 27);
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .container {
+            overflow: auto;
+            padding: 10px;
+        }
+
+
+        .menu {
+            float: left;
+            width: 20%;
+            padding: 10px;
+        }
+
+        .menu a {
+            background: linear-gradient(135deg, #1D976C, #93F9B9);
+            padding: 12px;
+            margin-bottom: 8px;
+            display: block;
+            width: 100%;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #e69500;
+        }
+
+        /* ເນື້ອຫາຫຼັກ */
+        .main {
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        /* ສ່ວນ Sidebar ເບື້ອງຂວາ */
+        .right {
+            float: left;
+            width: 20%;
+            padding: 15px;
+            background: linear-gradient(135deg, #0575E6, #021B79);
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* ສ່ວນ Footer */
+        .footer {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: rgb(22, 21, 21);
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            clear: both;
+        }
+
+        /* ການສະແດງຜົນໃນມືຖື (Responsive) */
+        @media only screen and (max-width: 768px) {
+
+            .menu,
+            .main,
+            .right {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-   <h1>Home Work</h1>
-   <h2>Home Work</h2>
-   
-   
 
-  
-  
-  
-   
-   
+    <div class="header">
+        <h1>KTS Shop</h1>
+    </div>
+
+    <div class="container">
+        <div class="menu">
+            <a href="#">ໜ້າທໍາອິດ</a>
+            <a href="#">ສິນຄ້າ</a>
+            <a href="#">ບໍລິການ</a>
+            <a href="#">ຕິດຕໍ່ເຮົາ</a>
+        </div>
+
+        <div class="main">
+            <h2>ຍິນດີຕ້ອນຮັບ</h2>
+            <p>ນີ້ຄືຕົວຢ່າງການອອກແບບ Layout ໂດຍໃຊ້ CSS Float ເພື່ອແບ່ງສ່ວນການສະແດງຜົນໃຫ້ເປັນລະບົບ.</p>
+            <p>ນັກສຶກສາສາມາດຮຽນຮູ້ກ່ຽວກັບຕໍາແໜ່ງ (Positioning) ແລະ ການເຮັດ Responsive Design
+                ເພື່ອໃຫ້ເວັບໄຊຮອງຮັບທຸກອຸປະກອນ.</p>
+        </div>
+
+        <div class="right">
+            <h2>ກ່ຽວກັບຮ້ານຂອງເຮົາ</h2>
+            <p>ຮ້ານຄ້າ KTS ຂອງພວກເຮົາບໍລີ</p>
+            <p>ການຂາຍສິນຄ້າທີ່ມີຄຸນນະພາບ ແລະ ການບໍລິການທີ່ສຸຍອດ</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        kts.edu.la
+    </div>
+
 </body>
 
 </html>

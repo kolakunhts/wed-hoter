@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ລະບົບໂຄສະນາເລື່ອນ</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;700&display=swap">
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Lao', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+
+        }
+
+        .promo-wrapper {
+            width: 100%;
+            background-color: #085179,#23989c;
+            color: #f4f4f4;
+            overflow: hidden;
+            padding: 14px 0;
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .promo-text {
+            display: inline-block;
+            padding-left: 100%;
+            font-size: 18px;
+            font-weight: 700px;
+            animation: scroll 20s linear infinite;
+        }
+        @keyframes marquee-animation {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+          
+        .promo-text {
+            animation: marquee-animation 20s linear infinite;
+        }
+    </style>
+
+
+</body>
+
+</html>

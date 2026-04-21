@@ -54,10 +54,43 @@
             }
         }
           
-        .promo-text {
-            animation: marquee-animation 20s linear infinite;
+        .promo-wrapper:hover .promo-text {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        h1 {
+            color: #085179;
+            margin-bottom: 20px;
+        }
+      .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #085179;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 40px;
+            font-size: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #23989c;
+        }
+        .spacer {
+            height: 20px;
         }
     </style>
+
+    
 
 
 </body>

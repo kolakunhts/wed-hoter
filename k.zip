@@ -28,7 +28,7 @@
 
         .promo-wrapper {
             width: 100%;
-            background: linear-gradient(90deg, #1f99a6, #21565e);
+            background: linear-gradient(#2ecc71);
             color: #f4f4f4;
             overflow: hidden;
             padding: 14px 0;
@@ -44,7 +44,7 @@
             padding-left: 100%;
             font-size: 18px;
             font-weight: 700px;
-            animation: marquee-animation 20s linear infinite;
+            animation: marquee-animation 40s linear infinite;
         }
 
         @keyframes marquee-animation {
@@ -100,11 +100,11 @@
     </style>
 
     <div class="promo-wrapper">
-        <div class="promo-text">BCSP4A-AM ສນ ກໍລະກັນ ຮຽວທະວີສຸກ</div>
+        <div class="promo-text">📣ໂປຮໂມຊັ່ນພິເສດ ສຳລັບຄົນທີ່ສັ່ງ100.000ຂື້ນໄປສຈັດສົ່ງຟຣີ🥳 BCSP4A-AM ສນ ກໍລະກັນ ຮຽວທະວີສຸກ</div>
     </div>
     <div class="container">
         <h1>ລະບົບໂຄສະນາເລື່ອນ</h1>
-        <p>ສ້າງການໂຄສະນາແບບເລື່ອນໃນເວັບໄຊ ເພາະໃນເວັບໄຊ ການໂຄສະນາແບບເລື່ອນ ແນ່ນ ການໂຄສະນາແບບເລື່ອນ  </p>
+        <p>ສ້າງການໂຄສະນາແບບເລື່ອນໃນເວັບໄຊ ເພາະໃນເວັບໄຊ ການໂຄສະນາແບບເລື່ອນ ແນ່ນ ການໂຄສະນາແບບເລື່ອນ </p>
         <a href="https://web.whatsapp.com" class="cta-button">ເບີ່ງສີນຄ້າ</a>
         <div class="spacer"></div>
 

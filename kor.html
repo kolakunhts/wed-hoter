@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="lo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ສິນຄ້າແນະນຳ</h1>
+        <p>ລະບົບຮ້ານຄ້າອອນລາຍ </p>
+
+        <div class="cart-icon-container" onclick="toggleCartSection()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count" class="cart-count">0</span>
+        </div>
+    </header>
+
+    <main class="products-grid">
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500" alt="ເສື້ອຢືດແຟຊັ່ນ">
+            <div class="card-body">
+                <h3>Apple Watch</h3>
+                <p>ກັນນ້ຳໄດ້ ແລະ ທົນທານ</p>
+                <div class="price">120,000 ກີບ</div>
+                <button class="btn" onclick="addToCart('ເສື້ອຢືດແຟຊັ່ນ', 120000)">ເພີ່ມໃສ່ກະຕ່າ</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="ໂມງຂໍ້ມື">
+            <div class="card-body">
+                <h3>ໂມງຂໍ້ມື Watch</h3>
+                <p>ກັນນ້ຳໄດ້ ແລະ ທົນທານ</p>
+                <div class="price">350,000 ກີບ</div>
+                <button class="btn" onclick="addToCart('ໂມງຂໍ້ມື', 350000)">ເພີ່ມໃສ່ກະຕ່າ</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1583394833336-acd977736f90?w=500" alt="ຫູຟັງ Bluetooth">
+            <div class="card-body">
+                <h3>ຫູຟັງ Bluetooth</h3>
+                <p>ສຽງເບສໜັກແໜ້ນ ໃຊ້ໄດ້ດົນ</p>
+                <div class="price">250,000 ກີບ</div>
+                <button class="btn" onclick="addToCart('ຫູຟັງ Bluetooth', 250000)">ເພີ່ມໃສ່ກະຕ່າ</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500" alt="ກ້ອງຖ່າຍຮູບ">
+            <div class="card-body">
+                <h3>ກ້ອງຖ່າຍຮູບ Mini</h3>
+                <p>ຂະໜາດກະທັດຮັດ ພົກພາງ່າຍ</p>
+                <div class="price">450,000 ກີບ</div>
+                <button class="btn" onclick="addToCart('ກ້ອງຖ່າຍຮູບ Mini', 450000)">ເພີ່ມໃສ່ກະຕ່າ</button>
+            </div>
+        </article>
+    </main>
+
+    <section class="checkout-section">
+        <div class="form-container">
+            <h2>ແບບຟອມສັ່ງຊື້ສິນຄ້າ</h2>
+            <div class="input-group">
+                <label>ຊື່ ແລະ ນາມສະກຸນ</label>
+                <input type="text" id="name" placeholder="ປ້ອນຊື່ ແລະ ນາມສະກຸນ">
+            </div>
+            <div class="input-group">
+                <label>ເບີໂທລະສັບ</label>
+                <input type="text" id="phone" placeholder="ປ້ອນເບີໂທລະສັບ">
+            </div>
+            <div class="input-group">
+                <label>ທີ່ຢູ່ຈັດສົ່ງ</label>
+                <textarea id="address" rows="3" placeholder="ປ້ອນທີ່ຢູ່ລະອຽດ"></textarea>
+            </div>
+            <div class="input-group">
+                <label>ລາຍການສິນຄ້າທີ່ເລືອກ</label>
+                <input type="text" id="order-ນີ້ຄືໂຄ້ດ HTML ທັງໝົດທີ່ຖອດອອກມາຈາກຮູບພາບ (image.png, image_2.png ແລະ ຮູບທີ 3) ເພື່ອໃຫ້ເຈົ້າສາມາດກັອບປີ້ໄປໃຊ້ງານໄດ້ເລີຍ:
+
+### **HTML Code (index.html)**
+
+```html
+<!DOCTYPE html>
+<html lang=" lo">
+
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>E-commerce Layout & Cart</title>
+                    <link
+                        href="[https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap](https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap)"
+                        rel="stylesheet">
+                    <link rel="stylesheet"
+                        href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+                    <link rel="stylesheet" href="style.css">
+                </head>
+
+                <body>
+
+                    <header>
+                        <h1>ສິນຄ້າແນະນຳ</h1>
+                        <p>ລະບົບຮ້ານຄ້າອອນລາຍ (E-commerce UI)</p>
+
+                        <div class="cart-icon-container" onclick="toggleCartSection()">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </div>
+                    </header>
+
+                    <main class="products-grid">
+                        <!-- Product 1 -->
+                        <article class="card">
+                            <img src="[https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500](https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500)"
+                                alt="ເສື້ອຍືດແຟຊັ່ນ">
+                            <div class="card-body">
+                                <h3>Apple Watch</h3>
+                                <p>ກັນນ້ຳໄດ້ ແລະ ທົນທານ</p>
+                                <div class="price">120,000 ກີບ</div>
+                                <button class="btn" onclick="addToCart('ເສື້ອຍືດແຟຊັ່ນ', 120000)">ເພີ່ມໃສ່ກະຕ່າ</button>
+                            </div>
+                        </article>
+
+                        <!-- Product 2 -->
+                        <article class="card">
+                            <img src="[https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500](https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500)"
+                                alt="ໂມງສວຍງາມ">
+                            <div class="card-body">
+                                <h3>ໂມງສິ້ນ (Watch)</h3>
+                                <p>ກັນນ້ຳໄດ້ ແລະ ທົນທານ</p>
+                                <div class="price">350,000 ກີບ</div>
+                                <button class="btn" onclick="addToCart('ໂມງສິ້ນ', 350000)">ເພີ່ມໃສ່ກະຕ່າ</button>
+                            </div>
+                        </article>
+
+                        <!-- Product 3 -->
+                        <article class="card">
+                            <img src="[https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500](https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500)"
+                                alt="ຫູຟັງ Bluetooth">
+                            <div class="card-body">
+                                <h3>ຫູຟັງ Bluetooth</h3>
+                                <p>ສຽງເບດໜັກແໜ້ນ ໃຊ້ໄດ້ດົນ</p>
+                                <div class="price">250,000 ກີບ</div>
+                                <button class="btn"
+                                    onclick="addToCart('ຫູຟັງ Bluetooth', 250000)">ເພີ່ມໃສ່ກະຕ່າ</button>
+                            </div>
+                        </article>
+
+                        <!-- Product 4 -->
+                        <article class="card">
+                            <img src="[https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500](https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500)"
+                                alt="ກ້ອງຖ່າຍຮູບ">
+                            <div class="card-body">
+                                <h3>ກ້ອງຖ່າຍຮູບ Mini</h3>
+                                <p>ຂະໜາດກະທັດຮັດ ພົກພາງ່າຍ</p>
+                                <div class="price">450,000 ກີບ</div>
+                                <button class="btn"
+                                    onclick="addToCart('ກ້ອງຖ່າຍຮູບ Mini', 450000)">ເພີ່ມໃສ່ກະຕ່າ</button>
+                            </div>
+                        </article>
+                    </main>
+
+                    <section class="checkout-section">
+                        <div class="form-container">
+                            <h2>ແບບຟອມສັ່ງຊື້ສິນຄ້າ</h2>
+                            <div class="input-group">
+                                <label>ຊື່ ແລະ ນາມສະກຸນ</label>
+                                <input type="text" id="name" placeholder="ປ້ອນຊື່ ແລະ ນາມສະກຸນ">
+                            </div>
+
+                            <div class="input-group">
+                                <label>ເບີໂທລະສັບ</label>
+                                <input type="text" id="phone" placeholder="ປ້ອນເບີໂທລະສັບ">
+                            </div>
+
+                            <div class="input-group">
+                                <label>ທີ່ຢູ່ຈັດສົ່ງ</label>
+                                <textarea id="address" rows="3" placeholder="ປ້ອນທີ່ຢູ່ລະອຽດ"></textarea>
+                            </div>
+
+                            <div class="input-group">
+                                <label>ລາຍການສິນຄ້າທີ່ເລືອກ</label>
+                                <input type="text" id="order-list" value="ຍັງບໍ່ມີສິນຄ້າ" readonly
+                                    style="background-color: #e2e8f0;">
+                            </div>
+
+                            <div class="input-group">
+                                <label>ລວມມູນຄ່າທັງໝົດ</label>
+                                <input type="text" id="total-price" value="0 ກີບ" readonly
+                                    style="background-color: #e2e8f0; font-weight: bold; color: #d97706;">
+                            </div>
+
+                            <button class="btn" style="width: 100%; margin-top: 10px;"
+                                onclick="submitOrder()">ຢືນຢັນການສັ່ງຊື້</button>
+                            <p id="status" style="margin-top: 15px; text-align: center; font-weight: 500;"></p>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <p>2026 Shop Online. All Rights Reserved.</p>
+                    </footer>
+
+                    <script src="script.js"></script>
+                </body>
+
+</html>

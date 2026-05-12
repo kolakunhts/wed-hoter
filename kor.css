@@ -147,7 +147,7 @@ header p {
 }
 
 /* ເພີ່ມ CSS ສຳລັບສ່ວນ Checkout Form */
-.checkout-section {
+.k {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
@@ -191,10 +191,12 @@ header p {
 .input-group input:focus {
     border-color: #6366f1;
 }
-footer{
+
+footer {
     text-align: center;
 }
-.box1{
+
+/* .box1{
 color: #4338ca;
 text-align: center;
-}
+} */

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="lo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ໃບຮັບເງິນ - EasyShop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans Lao', sans-serif;
+            /* ໃຊ້ຟອນ Noto Sans Lao ທັງໝົດ */
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .bill-container {
+            background: white;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h2 {
+            color: #4f46e5;
+            font-size: 1.8rem;
+            margin-top: 10px;
+        }
+
+        .info-box {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .item-list {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .total-amount {
+            text-align: right;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #4f46e5;
+            margin-top: 20px;
+        }
+
+        /* ສ່ວນຂອງປຸ່ມທີ່ເຈົ້າສ້າງມາ */
+        .action-btns {
+            margin-top: 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.3s;
+            color: white;
+        }
+
+        .btn-print {
+            background-color: #5d56f3;
+        }
+
+        /* ປຸ່ມສີຟ້າພິມ */
+        .btn-save {
+            background-color: #10b981;
+        }
+
+        /* ປຸ່ມສີຂຽວ */
+        .btn-back {
+            background-color: #f1f5f9;
+            color: #475569;
+        }
+
+        /* ປຸ່ມສີເທົາ */
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        /* ຕັ້ງຄ່າບ່ອນກົດພິມ */
+        @media print {
+            .action-btns {
+                display: none;
+            }
+
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .bill-container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bill-container">
+        <div class="header">
+            <i class="fa-solid fa-circle-check" style="font-size: 3.5rem; color: #10b981;"></i>
+            <h2>ໃບຮັບເງິນ</h2>
+        </div>
+
+        <div id="display-info" class="info-box">
+        </div>
+
+        <div id="display-items" class="item-list">
+        </div>
+
+        <div class="total-amount" id="display-total">
+            0 ກີບ
+        </div>
+
+        <div class="action-btns">
+            <button class="btn btn-print" onclick="window.print()">
+                <i class="fa-solid fa-print"></i> ພິມໃບຮັບ
+            </button>
+            <button class="btn btn-save" onclick="window.print()">
+                <i class="fa-solid fa-download"></i> ບັນທຶກເປັນ PDF
+            </button>
+            <button class="btn btn-back" onclick="location.href='index.html'">
+                <i class="fa-solid fa-arrow-left"></i> ກັບຄືນໜ້າຫຼັກ
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // ດຶງຂໍ້ມູນຈາກ localStorage
+        const orderData = JSON.parse(localStorage.getItem('myOrder'));
+
+        if (orderData) {
+            // ສະແດງຂໍ້ມູນຜູ້ຊື້
+            document.getElementById('display-info').innerHTML = `
+                <p><b>ວັນທີ:</b> ${orderData.date}</p>
+                <p><b>ຊື່ລູກຄ້າ:</b> ${orderData.name}</p>
+                <p><b>ເບີໂທ:</b> ${orderData.tel}</p>
+                <p><b>ທີ່ຢູ່:</b> ${orderData.loc}</p>
+            `;
+
+            // ສະແດງລາຍການສິນຄ້າ
+            let itemsHtml = orderData.items.map(item => `
+                <div class="item">
+                    <span>${item.name}</span>
+                    <span>${item.price.toLocaleString()} ກີບ</span>
+                </div>
+            `).join('');
+
+            document.getElementById('display-items').innerHTML = itemsHtml;
+
+            // ສະແດງລາຄາລວມ
+            document.getElementById('display-total').innerText = "ລວມ: " + orderData.total;
+        } else {
+            document.querySelector('.bill-container').innerHTML = "<h2>ບໍ່ພົບຂໍ້ມູນການສັ່ງຊື້</h2>";
+        }
+    </script>
+</body>
+
+</html>

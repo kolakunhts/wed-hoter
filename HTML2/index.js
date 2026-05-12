@@ -73,3 +73,46 @@ function confirmPurchase() {
     alert("ຂອບໃຈ " + name + " ທີ່ສັ່ງຊື້ສິນຄ້າກັບເຮົາ!");
     resetCart();
 }
+function renderUI() {
+    document.getElementById('cart-count').innerText = basket.length;
+
+    let total = basket.reduce((s, i) => s + i.price, 0);
+    document.getElementById('final-total-text').innerText = total.toLocaleString() + " ກີບ";
+
+    let nameList = basket.map(item => item.name).join(", ");
+    document.getElementById('cart-list-text').innerText = basket.length > 0 ? nameList : "ຍັງວ່າງເປົ່າ";
+}
+
+function resetCart() {
+    if (confirm("ລ້າງກະຕ່າສິນຄ້າ?")) {
+        basket = [];
+        renderUI();
+    }
+}
+
+function confirmPurchase() {
+    const name = document.getElementById('custName').value;
+    const tel = document.getElementById('custTel').value;
+    const loc = document.getElementById('custLoc').value;
+    const total = document.getElementById('final-total-text').innerText;
+
+    if (!name || !tel || basket.length === 0) {
+        alert("ກະລຸນາປ້ອນຂໍ້ມູນໃຫ້ຄົບ ແລະ ເລືອກສິນຄ້າ!");
+        return;
+    }
+
+    const orderData = {
+        name,
+        tel,
+        loc,
+        items: basket,
+        total,
+        date: new Date().toLocaleString()
+    };
+
+    // ເກັບຂໍ້ມູນລົງໃນ localStorage ເພື່ອໄປດຶງໃຊ້ໃນໜ້າ receipt.html
+    localStorage.setItem('myOrder', JSON.stringify(orderData));
+
+    // ຍ້າຍໄປໜ້າໃບເສັດ
+    window.location.href = 'receipt.html';
+}

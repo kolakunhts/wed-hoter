@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lo">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EasyShop - 10 Items Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    
+
+    <header>
+        <div class="logo">
+            <h1><i class="fa-solid fa-shop"></i> EasyShop</h1>
+        </div>
+        <div class="cart-box">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="products" id="product-list">
+        </div>
+
+        <div class="checkout">
+            <h2><i class="fa-solid fa-file-pen"></i> ຂໍ້ມູນການສັ່ງຊື້</h2>
+            <input type="text" id="custName" placeholder="ຊື່ ແລະ ນາມສະກຸນ">
+            <input type="text" id="custTel" placeholder="ເບີໂທລະສັບ">
+            <textarea id="custLoc" placeholder="ທີ່ຢູ່ຈັດສົ່ງສິນຄ້າ"></textarea>
+
+            <div class="summary">
+                <p>ລາຍການ: <span id="cart-list-text">ຍັງວ່າງເປົ່າ</span></p>
+                <h3>ລວມ: <span id="final-total-text">0</span> ກີບ</h3>
+            </div>
+
+            <button class="btn-confirm" onclick="confirmPurchase()">
+                <i class="fa-solid fa-check-circle"></i> ຢືນຢັນສັ່ງຊື້ & ອອກບິນ
+            </button>
+            <button class="btn-clear" onclick="resetCart()">ລ້າງກະຕ່າ</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
 </body>
+
 </html>
